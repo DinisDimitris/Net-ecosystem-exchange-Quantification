@@ -1,0 +1,21 @@
+soc = kg C m-2
+cum Trspn Spruc = mm 
+cum Trspn Shrub = mm 
+cum Trspn Moss = mm 
+cum Evapotrnspn = mm 
+cum Soil Evapn = mm
+cum Runoff  = mm 
+cum Disch/Rech = mm
+Water Table  = m
+Snowpack = m
+LAI Total = m2 m-2
+Leaf Spruce, Shrub, Moss = kg C m-2 
+Wood Spruce, Shrub, Moss = kg C m-2 
+Root Spruce,Shrub,Moss = kg C m-2 
+
+cum GPP  Spruce, shrub, moss = Total GPP cum= kg C m-2 s-1
+cum Ra Spruce, shrub, moss =  total RA cum = kg C m-2 s-1 
+cum NPP, NEP, Rh, CO2 flux, Ch4 flux = kg C m-2 s-1
+Rn, Le, H = W m-2
+SWC = m3 m-3
+Temp = k 
