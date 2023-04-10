@@ -4,3 +4,6 @@ datasets/warm_temp_maize_soybean_irrigated filter=lfs diff=lfs merge=lfs -text
 datasets/AMF_US-Ne1_FLUXNET_FULLSET_DD_2001-2020_3-5.csv filter=lfs diff=lfs merge=lfs -text
 datasets/cool_temp_maize_soybean filter=lfs diff=lfs merge=lfs -text
 datasets/extractedNEE_CUT_05_NIGHT.csv filter=lfs diff=lfs merge=lfs -text
+models/xgboost filter=lfs diff=lfs merge=lfs -text
+models/xgb_reg.json filter=lfs diff=lfs merge=lfs -text
+models/xgb_reg.pkl filter=lfs diff=lfs merge=lfs -text
