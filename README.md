@@ -21,10 +21,9 @@ land practices.
 
 This project tries to qunatify the net ecosystem exchange of crops under different environments (maize-soybean in cool, warm, irrigated, dryland environments). The project compares the performance of two models that have been shown in literature to perform well. Specifically, the tree-based model XGboost is benchmarked against the Deep Learning Gated Recurrent Unit. Both models have shown to perform well when temporal data about the state of the weather as well as the planting dates. This is because Co2 fluxes are homogeneous in nature, meaning microbial processes vary over time and space. Both models have succesfully learned to predict the NEE of these agroecosystems with great accuracy: 
 
-
 Bayesian optimized XGBoost model, trained on simulated data and fine tuned with observed test performance: 
-![alt text](https://github.com/DinisDimitris//Net-ecosystem-exchange-Quantification//results//HyperParam XGBNEEwith_planting_details.png?raw=true)
+![alt text](https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/results/HyperParamXGBNEEwith_planting_details.png?raw=true)
 
 GRU model with 64 hidden states and 20% dropout rate pre-trained on simulated data and fine-tuned on observed data: 
 
-![alt text](https://github.com//DinisDimitris//Net-ecosystem-exchange-Quantification//kgml-results//fine_tune_results.png?raw=true)
+![alt text](https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/kgml-results/fine_tune_results.png?raw=true)
