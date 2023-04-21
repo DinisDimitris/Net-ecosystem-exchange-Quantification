@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 36px;
+        margin-top: 0;
+      }
+      form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="number"], input[type="date"], input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .image-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      img {
+        max-width: 100%;
+      }
+      .summary {
+        margin-bottom: 20px;
+      }
+      body {
+        background-color: #d7f7e4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Net Ecosystem Exchange Estimator</h1>
+      <div class="image-container">
+        <img src="{{url_for('static', filename='nee.png')}}">
+      </div>
+      <div class="summary">
+        <p>This project uses machine learning to estimate the net carbon ecosystem exchange of agroecosystems.<br> <br>
+           It has been built for maize-soybean plantations under irrigated/dryland/rainfed warm/cool/temperate climates.</p>
+      </div>
+    <h1>Calculate your daily net ecosystem exchange</h1>
+    <h2>You just need to input these measurements!</h2>
+    <form method="POST" action="/">
+      <label for="date">Date:</label>
+      <input type="date" name="date" required><br><br>
+  
+      <label for="solar_rad">Solar Radiation (W/m^2):</label>
+      <input type="number" name="solar_rad" step="any" required><br><br>
+  
+      <label for="init_density">Initial Planting Density (m^2):</label>
+      <input type="number" name="init_density" step="any" required><br><br>
+  
+      <label for="max_temp">Max Air Temperature (°C):</label>
+      <input type="number" name="max_temp" step="any" required><br><br>
+  
+      <label for="min_temp">Min Air Temperature (°C):</label>
+      <input type="number" name="min_temp" step="any" required><br><br>
+  
+      <label for="max_soil_temp">Max Soil Temperature (°C):</label>
+      <input type="number" name="max_soil_temp" step="any" required><br><br>
+  
+      <label for="min_soil_temp">Min Soil Temperature (°C):</label>
+      <input type="number" name="min_soil_temp" step="any" required><br><br>
+  
+      <label for="min_humidity">Relative Min Air Humidity (ppm water vapor in air):</label>
+      <input type="number" name="min_humidity" step="any" required><br><br>
+  
+      <label for="max_humidity">Relative Max Air Humidity (ppm water vapor in air):</label>
+      <input type="number" name="max_humidity" step="any" required><br><br>
+  
+      <label for="precipitation">Precipitation (mm/day):</label>
+      <input type="number" name="precipitation" step="any" required><br><br>
+  
+      <label for="wind_speed">Wind Speed (m/s):</label>
+      <input type="number" name="wind_speed" step="any" required><br><br>
+  
+      <input type="submit" value="Predict">
