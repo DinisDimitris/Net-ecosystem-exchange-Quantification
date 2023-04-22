@@ -2,11 +2,10 @@ from flask import Flask, request, render_template
 import xgboost as xg
 import numpy as np
 import pandas as pd
-from decimal import Decimal
 
 # Load the xgboost model
 xgb_r = xg.XGBRegressor()
-xgb_r.load_model("../models/xgb_final.json")
+xgb_r.load_model("xgb_final.json")
 
 mdays=[31,28,31,30,31,30,31,31,30,31,30,31]
 
