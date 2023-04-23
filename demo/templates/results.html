@@ -12,6 +12,15 @@
           margin-top: 50px;
           color: #1e6d2e;
         }
+        input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+        background-color: #3e8e41;
+        }
         
         p {
           font-size: 20px;
@@ -66,10 +75,21 @@
     <p class="message2"> NEE tends to fluctuate mostly throughout autumn and sink in the winter</p>
 
     <p class="message2"> For this reason, the model calculates the NEE for the relative season and compares it to the average NEE in that season which has been retrieved by averaging measurements throughout 2015 to 2022.</p>
+      
+      
+    <p class="message2"> Please note that the project is a proof of concept, and may not give accurate results.</p>
     
     <div class="image-row">
       <img class="image1" src="{{url_for('static', filename='nee_yearly.png')}}"alt="Image 1">
       <img class="image2" src="{{url_for('static', filename='nee_seasonaly.png')}}" alt="Image 2">
+    </div>
+      
+     <div>
+      <a href="/">
+        <form action="/">
+              <input type="submit" value="Back">
+        </form>
+        </a>
     </div>
   </body>
 </html>
