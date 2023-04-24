@@ -67,7 +67,7 @@ def interpret_predictions(nee: float, date: np.datetime64):
     season = season
     result["message2"] = "The season is " + season.lower()
     
-    result["message3"] = "Average agroecosystem NEE in " + season.lower() + " is: " + str(season_nee_means[season] + " g C m-2 day-1 ")
+    result["message3"] = "Average agroecosystem NEE in " + season.lower() + " is: " + str(season_nee_means[season]) + " g C m-2 day-1"
     
     if (nee > season_nee_means[season]):
         result["message4"] = "Your agroecosystem is estimated to have a higher carbon absorbtion capability than an average agroecosystem in " + season.lower()
