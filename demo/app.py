@@ -58,16 +58,16 @@ def interpret_predictions(nee: float, date: np.datetime64):
     result = {}
     
     if (nee > 0):
-        result["message1"] = "The agroecosystem is estimated to be a net carbon sink, with a net ecosystem exchange of %0.4f" % nee
+        result["message1"] = "The agroecosystem is estimated to be a net carbon sink, with a net ecosystem exchange of %0.4f g C m-2 day-1" % nee
     else:
-        result["message1"] = "The agroecosystem is estimated to be a net carbon source, with a net ecosystem exchange of %0.4f" % nee
+        result["message1"] = "The agroecosystem is estimated to be a net carbon source, with a net ecosystem exchange of %0.4f g C m-2 day-1" % nee
     
     season = get_season_by_date(date.month)
     
     season = season
     result["message2"] = "The season is " + season.lower()
     
-    result["message3"] = "Average agroecosystem NEE in " + season.lower() + " is: " + str(season_nee_means[season])
+    result["message3"] = "Average agroecosystem NEE in " + season.lower() + " is: " + str(season_nee_means[season] + " g C m-2 day-1 ")
     
     if (nee > season_nee_means[season]):
         result["message4"] = "Your agroecosystem is estimated to have a higher carbon absorbtion capability than an average agroecosystem in " + season.lower()
