@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+          background-color: #d7f7e4;
+        }
+        
+        h1 {
+          text-align: center;
+          font-size: 40px;
+          margin-top: 50px;
+          color: #1e6d2e;
+        }
+        input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+        background-color: #3e8e41;
+        }
+        
+        p {
+          font-size: 20px;
+          line-height: 1.5;
+          margin: 20px;
+          color: #1e6d2e;
+        }
+        
+        .image-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+        }
+        
+        .image1 {
+          width: 1000px;
+          height: 500px;
+          margin: 20px;
+        }
+
+        .image2 {
+          width: 500px;
+          height: 300px;
+          margin: 20px;
+        }
+        
+        .message1 {
+          font-size: 30px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 50px;
+          color: #1e6d2e;
+        }
+        
+        .message2 {
+          font-size: 25px;
+          text-align: center;
+          margin-top: 20px;
+          color: #1e6d2e;
+        }
+    </style>
+    <title>Agroecosystem Carbon Exchange Results</title>
+  </head>
+  <body>
+    <h1>Agroecosystem Carbon Exchange Results</h1>
+    
+    <p class="message1">{{ result.message1 }}</p>
+    <p class="message2">{{ result.message2 }}</p>
+    <p class="message1">{{ result.message3 }}</p>
+    <p class="message2">{{ result.message4 }}</p>
+    <p class="message2"> NEE tends to fluctuate mostly throughout autumn and sink in the winter</p>
+
+    <p class="message2"> For this reason, the model calculates the NEE for the relative season and compares it to the average NEE in that season which has been retrieved by averaging measurements throughout 2015 to 2022.</p>
+      
+      
+    <p class="message2"> Please note that the project is a proof of concept, and may not give accurate results.</p>
+    
+    <div class="image-row">
+      <img class="image1" src="{{url_for('static', filename='nee_yearly.png')}}"alt="Image 1">
+      <img class="image2" src="{{url_for('static', filename='nee_seasonaly.png')}}" alt="Image 2">
+    </div>
+      
+     <div>
+      <a href="/">
+        <form action="/">
+              <input type="submit" value="Back">
+        </form>
+        </a>
+    </div>
+  </body>
+</html>
