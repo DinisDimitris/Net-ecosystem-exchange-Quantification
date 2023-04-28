@@ -49,6 +49,14 @@ def myloss_mul_sum(output, target,loss_weights):
         loss = loss + loss_weights[i]*torch.mean((output[:,:,i] - target[:,:,i])**2)
     return loss
 
+def my_loss(output, target):
+    loss = torch.mean((output - target)**2)
+    return loss
+
+def my_loss_weighted(output, target, mask):
+    loss = torch.mean(((output - target)**2)*mask)
+    return loss
+
 def Z_norm(X):
     X_mean=X.mean()
     X_std=np.std(np.array(X))
