@@ -11,7 +11,7 @@ class KGML(nn.Module):
             self.gru = nn.GRU(ninp, nhid,nlayers,dropout=dropout)
         else:
             self.gru = nn.GRU(ninp, nhid,nlayers)
-        #self.densor1 = nn.ReLU() #can test other function
+        self.densor1 = nn.ReLU() #can test other function
         self.densor2 = nn.Linear(nhid, nout)
         self.nhid = nhid
         self.nlayers = nlayers
