@@ -1,9 +1,9 @@
 import torch.nn as nn
-<<<<<<< HEAD
+
 import torch 
 import torch.nn.functional as F
-=======
->>>>>>> aea38247b495d5c6c732179867b280cbdce59ad9
+
+
 
 ### Knowledge guided machine learning implementation using gated recurrent units
 ### Inspired from https://gmd.copernicus.org/articles/15/2839/2022
@@ -14,11 +14,11 @@ class KGML(nn.Module):
             self.gru = nn.GRU(ninp, nhid,nlayers,dropout=dropout)
         else:
             self.gru = nn.GRU(ninp, nhid,nlayers)
-<<<<<<< HEAD
+
         self.densor1 = nn.ReLU() #can test other function
-=======
+
         #self.densor1 = nn.ReLU() #can test other function
->>>>>>> aea38247b495d5c6c732179867b280cbdce59ad9
+
         self.densor2 = nn.Linear(nhid, nout)
         self.nhid = nhid
         self.nlayers = nlayers
@@ -56,7 +56,7 @@ def myloss_mul_sum(output, target,loss_weights):
         loss = loss + loss_weights[i]*torch.mean((output[:,:,i] - target[:,:,i])**2)
     return loss
 
-<<<<<<< HEAD
+
 def my_loss(output, target):
     loss = torch.mean((output - target)**2)
     return loss
@@ -65,8 +65,8 @@ def my_loss_weighted(output, target, mask):
     loss = torch.mean(((output - target)**2)*mask)
     return loss
 
-=======
->>>>>>> aea38247b495d5c6c732179867b280cbdce59ad9
+
+
 def Z_norm(X):
     X_mean=X.mean()
     X_std=np.std(np.array(X))
@@ -76,7 +76,7 @@ class R2Loss(nn.Module):
     #calculate coefficient of determination
     def forward(self, y_pred, y):
         var_y = torch.var(y, unbiased=False)
-<<<<<<< HEAD
+
         return 1.0 - F.mse_loss(y_pred, y, reduction="mean") / var_y
     
 class EarlyStopping:
@@ -92,6 +92,6 @@ class EarlyStopping:
             self.counter +=1
             if self.counter >= self.tolerance:
                 self.early_stop = True
-=======
+
         return 1.0 - F.mse_loss(y_pred, y, reduction="mean") / var_y
->>>>>>> aea38247b495d5c6c732179867b280cbdce59ad9
+
