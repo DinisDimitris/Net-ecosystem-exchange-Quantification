@@ -1,5 +1,7 @@
 # Co2-crop-quantification
 
+To run webapp, install dependencies in the requirements.txt , pip install -r demo/requirements.txt
+Launch the app by navigating in demo and running the app.py script: python app.py
 
 In an agroecosystem, carbon net ecosystem exchange (NEE) represents the carbon net prime productivity (NPP) (gross carbon capture minus losses resulting from plant respiration) reduced by heterotrophic respiration (carbon released from soil to atmosphere from the decomposition of soil microbes and fauna organic matter).
 
