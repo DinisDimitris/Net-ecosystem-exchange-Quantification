@@ -15,8 +15,6 @@ class KGML(nn.Module):
         else:
             self.gru = nn.GRU(ninp, nhid,nlayers)
 
-        self.densor1 = nn.ReLU() #can test other function
-
         #self.densor1 = nn.ReLU() #can test other function
 
         self.densor2 = nn.Linear(nhid, nout)
@@ -92,6 +90,4 @@ class EarlyStopping:
             self.counter +=1
             if self.counter >= self.tolerance:
                 self.early_stop = True
-
-        return 1.0 - F.mse_loss(y_pred, y, reduction="mean") / var_y
 
