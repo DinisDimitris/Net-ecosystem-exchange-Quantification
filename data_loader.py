@@ -86,10 +86,14 @@ def average_numbered_columns(df):
 def nee_cumulative_to_daily(df: pd.DataFrame) -> pd.DataFrame:
     df['DOY'] = df['DOY'].astype(int)
 
+    # NPP and RH are calculated as cumulative values by ecosys, therefore we divide them by the day of the year to get daily values
     # Divide only rows with DOY > 0
     df['ECO_NPP'] = df.apply(lambda row: row['ECO_NPP']/row['DOY'] if row['DOY'] != 0 else row['ECO_NPP'], axis=1)
     df['ECO_RH'] = df.apply(lambda row: row['ECO_RH']/row['DOY'] if row['DOY'] != 0 else row['ECO_RH'], axis=1)
-
+    
+    # NPP = GPP - RA
+    # NEE = GPP - (RH + RA)
+    # = NPP - RH
     df['NEE'] = df['ECO_NPP'] - df['ECO_RH']
     
     return df
