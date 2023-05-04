@@ -1,5 +1,0 @@
-> re-generate cool-maize with the same outs as warm/temp
-
-> CCRM 
-
-> KGML 
