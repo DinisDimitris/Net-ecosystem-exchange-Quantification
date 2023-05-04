@@ -4,7 +4,6 @@ ecosys_initial_configurations/warm_temp_maize-soybean_dryland/outputs
 datasets/*
 .ipynb_checkpoints
 
-xgmodels/*
 
 models/xgb_reg.pkl
 models/xgb_reg.json
