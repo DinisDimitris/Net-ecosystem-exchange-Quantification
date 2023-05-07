@@ -58,7 +58,7 @@ def interpret_predictions(nee: float, date: np.datetime64):
     result = {}
     
     if (nee > 0):
-        result["message1"] = "The agroecosystem is estimated to be a net carbon sink, with a net ecosystem exchange of %0.4f g C m-2 day-1" % nee
+        result["message1"] = "The agroecosystem is estimated to be a net carbon sink, with a net ecosystem exchange (NEE) of %0.4f g C m-2 day-1" % nee
     else:
         result["message1"] = "The agroecosystem is estimated to be a net carbon source, with a net ecosystem exchange of %0.4f g C m-2 day-1" % nee
     
