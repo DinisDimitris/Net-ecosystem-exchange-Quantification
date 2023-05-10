@@ -10,7 +10,19 @@ Optimizers for GRU RNN:
 
 <p align="center">
   <img src="https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/kgml-results/trainlossGRUopt.png" alt="First Image" width="300px">
+  <br>
+  Caption for the first image
+</p>
+
+<p align="center">
   <img src="https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/results/rmspropgru_pred.png" alt="Second Image" width="300px">
+  <br>
+  Caption for the second image
+</p>
+
+<p align="center">
+  <img src="https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/kgml-results/trainlossGRUopt.png" alt="First Image" width="450px">
+  <img src="https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/results/rmspropgru_pred.png" alt="Second Image" width="450px">
 </p>
 ![alt text](https://github.com/DinisDimitris/Net-ecosystem-exchange-Quantification/blob/main/kgml-results/trainlossGRUopt.png?raw=true)
 
