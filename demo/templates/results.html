@@ -10,23 +10,44 @@
           text-align: center;
           font-size: 40px;
           margin-top: 50px;
-          color: #1e6d2e;
         }
+
+        figcaption {
+        font-style: italic;
+        padding: 2px;
+        text-align: center;
+        height:-500px;
+        }
+
         input[type="submit"] {
         background-color: #4CAF50;
         color: #fff;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        font-size: 25px;
         }
         input[type="submit"]:hover {
-        background-color: #3e8e41;
+          background-color: #3e8e41;
         }
-        
+
+        figure {
+        display: inline-block;
+        border: 1px;
+        margin: 20px; /* adjust as needed */
+        }
+        figure img {
+            vertical-align: top;
+        }
+        figure figcaption {
+            border: 1px;
+            text-align: center;
+            font-size: 18px
+        }
+                
         p {
           font-size: 20px;
           line-height: 1.5;
           margin: 20px;
-          color: #1e6d2e;
         }
         
         .image-row {
@@ -37,14 +58,14 @@
         }
         
         .image1 {
-          width: 1000px;
-          height: 500px;
+          width: 1550px;
+          height: 700px;
           margin: 20px;
         }
 
         .image2 {
-          width: 500px;
-          height: 300px;
+          width: 650px;
+          height: 450px;
           margin: 20px;
         }
         
@@ -53,14 +74,12 @@
           font-weight: bold;
           text-align: center;
           margin-top: 50px;
-          color: #1e6d2e;
         }
         
         .message2 {
           font-size: 25px;
           text-align: center;
           margin-top: 20px;
-          color: #1e6d2e;
         }
     </style>
   </head>
@@ -71,7 +90,7 @@
     <p class="message2">{{ result.message2 }}</p>
     <p class="message1">{{ result.message3 }}</p>
     <p class="message2">{{ result.message4 }}</p>
-    <p class="message2"> The carbon uptake for maize-soybean tends to fluctuate mostly throughout autumn and sink in the winter</p>
+    <p class="message2"> The carbon uptake for maize-soybean tends to fluctuate mostly throughout autumn and sink in the winter as seen in Fig 1.0</p>
 
     <p class="message2"> For this reason, the model calculates the NEE for the relative season and compares it to the average NEE in that season which has been retrieved by averaging measurements.</p>
       
@@ -79,14 +98,20 @@
     <p class="message2"> Please note that the project is a proof of concept, and may not give accurate results.</p>
     
     <div class="image-row">
-      <img class="image1" src="{{url_for('static', filename='nee_yearly.png')}}"alt="Image 1">
+      <figure>
       <img class="image2" src="{{url_for('static', filename='nee_seasonaly.png')}}" alt="Image 2">
+      <figcaption>Fig 1.0 Distributions of NEE across seasons of the year for maize-soybean.
+        <br>As can be seen, the NEE fluctuates throughout Autumn and Summer, which are usually the growing seasons
+        <br>On the other hand, NEE sinks in Winter due to lack of resources. 
+        <br>Spring has the lowest NEE absorbtion as that tends to be the planting season. </figcaption>
+      </figure>
     </div>
       
      <div>
       <a href="/">
         <form action="/">
-              <input type="submit" value="Back">
+          <input type="submit" value="Back">
+             
         </form>
         </a>
     </div>
